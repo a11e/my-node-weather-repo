@@ -8,6 +8,7 @@ console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()
+
 const publicDirPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirPath))
