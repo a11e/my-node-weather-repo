@@ -8,6 +8,7 @@ console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
 const app = express()
+const port = process.env.PORT || 5500
 
 const publicDirPath = path.join(__dirname, '../public')
 
@@ -61,4 +62,6 @@ app.get('/weather', (req, res) => {
 })
 
 
-app.listen(5500)
+app.listen(port, () => {
+    console.log('server started on port ' + port)
+})
